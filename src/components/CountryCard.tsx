@@ -1,5 +1,4 @@
-import type { Country } from "../types/country";
-
+import type { Country } from "../types/Country";
 interface CountryCardProps {
   country: Country;
 }

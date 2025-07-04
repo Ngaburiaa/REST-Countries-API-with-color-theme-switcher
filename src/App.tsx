@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { NavBar } from "./components/NavBar";
 import { Home } from "./pages/Home";
-import type { Country } from "./types/country";
+import type { Country } from "./types/Country";
 import "./App.css";
 
 function App() {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { CountryCard } from '../components/CountryCard';
 import { CountryDetailModal } from '../components/CountryDetailModal';
-import type { Country } from '../types/country';
+import type { Country } from '../types/Country';
 
 interface Props {
   countries: Country[];

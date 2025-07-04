@@ -1,4 +1,4 @@
-import type { Country } from "../types/country";
+import type { Country } from "../types/Country";
 import { X } from "lucide-react";
 
 interface Props {
