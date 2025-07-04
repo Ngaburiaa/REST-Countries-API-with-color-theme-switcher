@@ -48,7 +48,7 @@ export const RegionFilter = ({ onFilter, darkMode }: RegionFilterProps) => {
             darkMode ? 'bg-gray-900' : 'bg-white'
           }`}
         >
-          {[...regions, ''].map((region, index) => (
+          {[...regions, ''].map((region) => (
             <button
               key={region || 'clear'}
               onClick={() => handleSelect(region)}
