@@ -9,22 +9,30 @@ interface Props {
 }
 
 export const CountryDetailModal = ({ country, countries, darkMode, onClose }: Props) => {
-  const currencies = country.currencies?.map((cur) => cur.name).join(', ') || 'N/A';
-  const languages = country.languages?.map((lang) => lang.name).join(', ') || 'N/A';
+  const currencies = country.currencies?.map((cur) => cur.name).join(", ") || "N/A";
+  const languages = country.languages?.map((lang) => lang.name).join(", ") || "N/A";
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
       <div
-        className={`max-w-4xl w-full p-6 rounded-md relative shadow-lg overflow-auto max-h-[90vh] ${
-          darkMode ? 'bg-blue-950 text-white' : 'bg-white text-gray-950'
+        className={`max-w-4xl w-full p-6 rounded-md relative shadow-lg overflow-auto max-h-[90vh] transition-colors duration-300 ${
+          darkMode ? "bg-gray-950 text-white" : "bg-white text-gray-900"
         }`}
       >
-        <button className="absolute top-4 right-4" onClick={onClose}>
+        <button
+          className="absolute top-4 right-4 hover:text-red-400 transition-colors"
+          onClick={onClose}
+          aria-label="Close"
+        >
           <X size={24} />
         </button>
 
         <div className="grid md:grid-cols-2 gap-10">
-          <img src={country.flags.svg} alt={country.name} className="w-full object-cover rounded" />
+          <img
+            src={country.flags.svg}
+            alt={country.name}
+            className="w-full object-cover rounded"
+          />
 
           <div>
             <h2 className="text-2xl font-bold mb-4">{country.name}</h2>
@@ -35,7 +43,7 @@ export const CountryDetailModal = ({ country, countries, darkMode, onClose }: Pr
                 <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
                 <p><strong>Region:</strong> {country.region}</p>
                 <p><strong>Subregion:</strong> {country.subregion}</p>
-                <p><strong>Capital:</strong> {country.capital || 'N/A'}</p>
+                <p><strong>Capital:</strong> {country.capital || "N/A"}</p>
               </div>
               <div>
                 <p><strong>Top Level Domain:</strong> {country.topLevelDomain?.[0]}</p>
@@ -53,8 +61,8 @@ export const CountryDetailModal = ({ country, countries, darkMode, onClose }: Pr
                     return border ? (
                       <span
                         key={code}
-                        className={`px-3 py-1 text-sm rounded shadow ${
-                          darkMode ? 'bg-blue-900' : 'bg-gray-200'
+                        className={`px-3 py-1 text-sm rounded shadow transition-colors ${
+                          darkMode ? "bg-gray-800" : "bg-gray-200"
                         }`}
                       >
                         {border.name}
