@@ -37,11 +37,11 @@ function App() {
         setCountries(data.countries);
       } else {
         console.error("Invalid country data format", data);
-        setCountries([]); // fallback
+        setCountries([]); 
       }
     } catch (error) {
       console.error("Failed to load countries:", error);
-      setCountries([]); // fallback
+      setCountries([]); 
     }
   };
 

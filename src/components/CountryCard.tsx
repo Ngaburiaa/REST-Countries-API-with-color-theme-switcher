@@ -1,4 +1,3 @@
-// src/components/CountryCard.tsx
 import type { Country } from "../types/country";
 
 interface CountryCardProps {
